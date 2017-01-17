@@ -1039,10 +1039,12 @@ class ReactImageLightbox extends Component {
 
     handleZoomInButtonClick() {
         this.changeZoom(this.state.zoomLevel + ZOOM_BUTTON_INCREMENT_SIZE);
+        this.setTimeout(this.forceUpdate.bind(this), 100);
     }
 
     handleZoomOutButtonClick() {
         this.changeZoom(this.state.zoomLevel - ZOOM_BUTTON_INCREMENT_SIZE);
+        this.setTimeout(this.forceUpdate.bind(this), 100);
     }
 
     handleCaptionMousewheel(event) {

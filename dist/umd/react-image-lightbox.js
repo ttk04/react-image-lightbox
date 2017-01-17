@@ -819,12 +819,12 @@
             }, {
                 key: "handleZoomInButtonClick",
                 value: function() {
-                    this.changeZoom(this.state.zoomLevel + _constant.ZOOM_BUTTON_INCREMENT_SIZE);
+                    this.changeZoom(this.state.zoomLevel + _constant.ZOOM_BUTTON_INCREMENT_SIZE), this.setTimeout(this.forceUpdate.bind(this), 100);
                 }
             }, {
                 key: "handleZoomOutButtonClick",
                 value: function() {
-                    this.changeZoom(this.state.zoomLevel - _constant.ZOOM_BUTTON_INCREMENT_SIZE);
+                    this.changeZoom(this.state.zoomLevel - _constant.ZOOM_BUTTON_INCREMENT_SIZE), this.setTimeout(this.forceUpdate.bind(this), 100);
                 }
             }, {
                 key: "handleCaptionMousewheel",
