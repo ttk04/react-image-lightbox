@@ -6,6 +6,7 @@
 
 import React, { Component, PropTypes } from 'react';
 import Modal from 'react-modal';
+import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import {
     translate,
     getWindowWidth,
@@ -35,6 +36,7 @@ import baseStyles from './style.scss';
 
 // Add fallback classes for browsers without flexbox support
 let styles = baseStyles;
+
 const _ieVersion = getIEVersion();
 if (_ieVersion < 10) {
     styles = {
@@ -1697,4 +1699,4 @@ ReactImageLightbox.defaultProps = {
     enableZoom:          true,
 };
 
-export default ReactImageLightbox;
+export default withStyles(styles)(ReactImageLightbox);
